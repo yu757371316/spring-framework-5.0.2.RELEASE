@@ -517,10 +517,6 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	}
 
 	@Override
-	/**
-	 * 在创建 IOC 容器前， 如果已经有容器存在， 则需要把已有的容器销毁和关闭,以保证在 refresh 之后使用的是新建立起来的 IOC 容器。
-	 * refresh 的作用类似于对 IOC 容器的重启，在新建立好的容器中对容器进行初始化
-	 */
 	public void refresh() throws BeansException, IllegalStateException {
 		synchronized (this.startupShutdownMonitor) {
 			// Prepare this context for refreshing.

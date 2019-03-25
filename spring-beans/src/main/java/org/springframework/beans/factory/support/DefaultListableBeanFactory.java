@@ -685,8 +685,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 	}
 
 
-	//对配置lazy-init属性为false单态Bean的预实例化
-	//lazy-init属性默认值为false
+	//对配置lazy-init属性单态Bean的预实例化
 	@Override
 	public void preInstantiateSingletons() throws BeansException {
 		if (this.logger.isDebugEnabled()) {
